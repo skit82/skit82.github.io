@@ -547,9 +547,7 @@ body {
 
 /*Описание*/
 
-.description__caption {
-	width: 606px;
-}
+
 .description__title {
 	padding: 0px;
 	margin: 0px;
@@ -573,6 +571,7 @@ body {
 }
 .description__descr {
 	padding: 0px;
+	padding-left: 60px;
 	margin: 0px;
 	font-size: 20px;
 	font-weight: 800;
@@ -581,21 +580,350 @@ body {
 	text-transform: uppercase;
 }
 .description__number {
+	display: block;
 	padding: 0px;
 	margin: 0px;
 	font-size: 172px;
 	font-weight: 800;
+	color: #ffffff;
 }
 .description__text {
 	padding: 0px;
-	margin: 0px;
+	margin:  auto 0px;
 	font-size: 18px;
 	line-height: 28px;
 	font-weight: 700;
 	color: #1c1c1c;
 }
-
+.description__wrapper {
+	width: 64.32%;
+	margin: 0px auto;
+	padding: 52px 0px;
+}
+.description__inner {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.description__content {
+	flex: 0 1 49%;
+	margin-bottom: 30px;
+	background-color: rgb(251, 247, 246);
+}
+.description__box {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+	position: relative;
+}
+.description__descr::before {
+	position: absolute;
+	content: "";
+	left: 25px;
+  top: 41px;
+	width: 26px;
+	height: 3px;
+	background-image: url(../img/icon-line.png);
+}
+.description__list {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+.description__item {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	position: relative;
+	margin-bottom: 3px;
+	min-height: 72px;
+	background-color: rgb(248, 240, 237);
+}
+.description__text::before {
+	position: absolute;
+	content: "";
+	left: 30px;
+  top: 30px;
+	width: 16px;
+	height: 12px;
+	background-image: url(../img/mark-icon.png);
+}
+@media (min-width: 1440px) {
+	.description__caption {
+    width: 400px;
+    margin: 0px auto;
+    margin-bottom: 52px;
+	}
+	.description__title {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    font-size: 65px;
+    line-height: 88px;
+    font-weight: 800;
+    color: #1c1c1c;
+    opacity: 0.07;
+	}
+	.description__name {
+    /*padding-left: 32px;*/
+    margin-top: -44px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 28px;
+	}
+	.description__number {
+		font-size: 122px;
+		line-height: 86px;
+		font-weight: 800;
+	}
+	.description__item {
+		min-height: 72px;
+		padding-left: 60px;
+	}
+	.description__text {
+    font-size: 14px;
+    line-height: 24px;
+	}
+	.description__descr {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 25px;
+	}
+}
+@media (min-width: 1600px) and (max-width: 2900px) {
+	.description__caption {
+    width: 620px;
+	}
+	.description__title {
+		text-align: center;
+		font-size: 100px;
+		line-height: 123px;
+	}
+	.description__name {
+		margin-top: -60px;
+		margin-bottom: 35px;
+		text-align: center;
+		font-size: 39px;
+		line-height: 42px;
+	}
+	.description__number {
+		font-size: 172px;
+		line-height: 119px;
+		font-weight: 800;
+	}
+	.description__item {
+		min-height: 82px;
+	}
+	.description__text {
+    font-size: 18px;
+    line-height: 28px;
+	}
+	.description__text::before {
+		position: absolute;
+		content: "";
+		left: 30px;
+	  top: 34px;
+		width: 16px;
+		height: 12px;
+		background-image: url(../img/mark-icon.png);
+	}
+	.description__descr {
+		font-size: 20px;
+		font-weight: 800;
+		line-height: 29px;
+	}
+	.description__descr::before {
+    left: 25px;
+    top: 57px;
+	}
+}
 /*Монтаж*/
+
+.assembly {
+	width: 100%;
+  max-width: 1920px;
+  /* min-height: 712px; */
+  background-image: url(../img/assembly-bg.jpg);
+  background-position: 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.assembly__inner {
+	width: 64.32%;
+	margin: 0px auto;
+	padding: 52px 0px;
+}
+.assembly__title {
+	padding: 0px;
+	margin: 0px;
+	font-size: 39px;
+	line-height: 52px;
+	font-weight: 800;
+	color: #ffffff;
+}
+.assembly__list {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+.assembly__text {
+	padding: 0px;
+	margin: 0px;
+	font-size: 18px;
+	line-height: 28px;
+	font-weight: 500;
+	color: #1c1c1c;
+}
+.assembly__note {
+	padding: 0px;
+	padding-left: 80px;
+	margin: 0px;
+	font-size: 24px;
+	line-height: 34px;
+	font-weight: 800;
+	color: #ff6100;
+}
+.assembly__inner {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+.assembly__caption {
+	position: relative;
+	flex: 0 1 50%;
+	margin: 55px 0px;
+	background-image: url(../img/assembly-fon.jpg);
+}
+.assembly__descr {
+	flex: 0 1 50%;
+	padding: 40px 0px;
+	background-color: rgb(255, 255, 255);
+}
+.assembly__item {
+	position: relative;
+	padding-left: 80px;
+	padding-right: 35px;
+}
+.assembly__footnote {
+	padding: 0px;
+	padding-left: 80px;
+	padding-right: 35px;
+	margin: 0px;
+	margin-bottom: 10px;
+	font-size: 12px;
+	font-weight: 800;
+}
+.assembly__footnote span {
+	display: block;
+	font-size: 12px;
+	font-weight: 500;
+}
+.assembly__text::before {
+	position: absolute;
+	content: "";
+	left: 40px;
+	top: 12px;
+	width: 26px;
+	height: 3px;
+	background-image: url(../img/icon-line.png);
+}
+@media (min-width: 1440px) {
+	.assembly__text {
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 24px;
+	}
+	.assembly__note {
+    padding: 0px;
+    padding-left: 80px;
+    padding-right: 35px;
+    margin: 0px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 800;
+    color: #ff6100;
+	}
+	.assembly__title {
+    padding-left: 76px;
+    padding-top: 76px;
+    padding-right: 76px;
+    font-size: 26px;
+    line-height: 39px;
+	}
+	.assembly__img {
+		position: absolute;
+    width: 100px;
+    right: 76px;
+    opacity: 0.25;
+	}
+}
+@media (min-width: 1600px) and (max-width: 2900px) {
+	.assembly__text {
+    margin-bottom: 44px;
+    font-size: 18px;
+    line-height: 28px;
+	}
+	.assembly__note {
+		margin: 0px;
+		margin-bottom: 15px;
+		font-size: 24px;
+		line-height: 34px;
+	}
+	.assembly__footnote {
+    padding: 0px;
+    padding-left: 80px;
+    padding-right: 35px;
+    margin: 0px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 800;
+	}
+	.assembly__footnote span {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+	}
+	.assembly__descr {
+    padding: 52px 0px;
+	}
+	.assembly__inner {
+    padding: 64px 0px;
+	}
+	.assembly__title {
+		padding-top: 66px;
+		padding-right: 72px;
+		font-size: 39px;
+		line-height: 52px;
+	}
+	.assembly__caption {
+	  margin: 57px 0px;
+	}
+	.assembly__img {
+    width: 190px;
+    bottom: 50px;
+	}
+}
 
 /*Франшиза*/
 
@@ -898,5 +1226,78 @@ body {
     margin-right: auto;
     padding: 77px 0px;
     z-index: 1;
+	}
+}
+
+/*Что потребуется*/
+
+.work {
+	background-color: rgb(251, 247, 246);
+}
+.work__title {
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	font-size: 100px;
+	line-height: 123px;
+	font-weight: 800;
+	color: #1c1c1c;
+	opacity: 0.07;
+}
+.work__name {
+	padding: 0px;
+	margin: 0px;
+	margin-top: -60px;
+	margin-bottom: 35px;
+	text-align: center;
+	font-size: 39px;
+	line-height: 42px;
+	font-weight: 800;
+	color: #1c1c1c;
+}
+@media (min-width: 1440px) {
+	.work__wrapper {
+		width: 64.32%;
+		margin: 0px auto;
+	}
+	.work__caption {
+    width: 465px;
+    margin: 0px auto;
+    margin-bottom: 52px;
+	}
+	.work__title {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    font-size: 65px;
+    line-height: 88px;
+    font-weight: 800;
+    color: #1c1c1c;
+    opacity: 0.07;
+	}
+	.work__name {
+    /*padding-left: 32px;*/
+    margin-top: -44px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 26px;
+    line-height: 29px;
+	}
+}
+@media (min-width: 1600px) and (max-width: 2900px) {
+	.work__caption {
+    width: 697px;
+	}
+	.work__title {
+		text-align: center;
+		font-size: 100px;
+		line-height: 123px;
+	}
+	.work__name {
+		margin-top: -60px;
+		margin-bottom: 35px;
+		text-align: center;
+		font-size: 39px;
+		line-height: 42px;
 	}
 }
