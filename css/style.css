@@ -274,8 +274,9 @@ body {
 	padding-top: 30px;
 }
 .promo__block {
-	max-width: 300px;
+	max-width: 280px;
 	width: 100%;
+	margin: 0px auto;
 	margin-bottom: 30px;
 }
 .promo__title {
@@ -284,16 +285,18 @@ body {
   font-size: 14px;
   line-height: 23px;
   font-weight: 800;
+  text-align: center;
   text-transform: uppercase;
   color: #fff;
 }
 .promo__descr {
 	padding: 0px;
-	padding-right: 35px;
+	/*padding-right: 35px;*/
 	margin: 0px;
-	font-size: 14px;
-	line-height: 24px;
+	font-size: 12px;
+	line-height: 22px;
 	font-weight: 500;
+	text-align: center;
 	color: #adadc9;
 }
 .promo__picture {
@@ -304,6 +307,7 @@ body {
 	display: flex;
 	-ms-align-items: center;
 	align-items: center;
+	justify-content: center;
 	margin-bottom: 10px;
 }
 .promo__number {
@@ -318,6 +322,9 @@ body {
 @media (min-width: 1440px) {
 	.promo {
 		padding: 0px;
+	}
+	.promo__picture {
+		justify-content: flex-start;
 	}
 	.promo__inner {
 		display: -webkit-flex;
@@ -344,11 +351,13 @@ body {
 	.promo__title {
     font-size: 16px;
     line-height: 25px;
+    text-align: left;
 	}
 	.promo__descr {
     padding-right: 20px;
     font-size: 12px;
     line-height: 22px;
+    text-align: left;
 	}
 }
 @media (min-width: 1600px) and (max-width: 2900px) {
@@ -737,6 +746,10 @@ body {
 .description {
 	padding: 0px 10px;
 }
+.description__caption {
+	width: 250px;
+	margin: 0px auto;
+}
 @media (min-width: 1440px) {
 	.description {
 		padding: 0px;
@@ -872,12 +885,15 @@ body {
 	padding: 52px 0px;
 }
 .assembly__title {
-	padding: 0px;
-	margin: 0px;
-	font-size: 39px;
-	line-height: 52px;
-	font-weight: 800;
-	color: #ffffff;
+	padding-left: 37px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  padding-right: 5px;
+  margin: 0px;
+  font-size: 20px;
+  line-height: 33px;
+  font-weight: 800;
+  color: #ffffff;
 }
 .assembly__list {
 	padding: 0px;
@@ -920,8 +936,9 @@ body {
 .assembly__caption {
 	position: relative;
 	flex: 0 1 50%;
-	margin: 55px 0px;
+	/*margin: 55px 0px;*/
 	background-image: url(../img/assembly-fon.jpg);
+	background-repeat: no-repeat;
 }
 .assembly__descr {
 	flex: 0 1 50%;
@@ -955,6 +972,14 @@ body {
   width: 26px;
   height: 3px;
   background-image: url(../img/icon-line.png);
+}
+.assembly__img {
+	position: absolute;
+  width: 50px;
+  right: 10px;
+  bottom: 10px;
+  opacity: 0.25;
+  z-index: 1;
 }
 @media (min-width: 1440px) {
 	.assembly {
@@ -1018,6 +1043,7 @@ body {
     padding-left: 76px;
     padding-top: 76px;
     padding-right: 76px;
+    padding-bottom: 0;
     font-size: 26px;
     line-height: 39px;
 	}
@@ -1025,7 +1051,11 @@ body {
 		position: absolute;
     width: 100px;
     right: 76px;
+    bottom: 40px;
     opacity: 0.25;
+	}
+	.assembly__caption {
+		margin: 55px 0px;
 	}
 }
 @media (min-width: 1600px) and (max-width: 2900px) {
@@ -1080,7 +1110,7 @@ body {
 .franchise__title {
 	padding: 0px;
   margin: 0px;
-  text-align: center;
+  text-align: left;
   font-size: 40px;
   line-height: 63px;
   font-weight: 800;
@@ -1092,7 +1122,7 @@ body {
 	margin: 0px;
 	margin-top: -33px;
 	margin-bottom: 30px;
-	text-align: center;
+	text-align: left;
 	font-size: 15px;
 	line-height: 18px;
 	font-weight: 800;
