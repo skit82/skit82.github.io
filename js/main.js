@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+    $('.main-nav__mob-icon').on('click', function() {
+        $('.main-nav__list').slideToggle(400, function(){
+          if($(this).css('display') === 'none'){
+          $(this).removeAttr('style')
+          };
+      });
+    })
 
     $('[data-toggle]').on('click', function(e){
     var tgt = $(this).data('target');
@@ -77,7 +84,7 @@ $(document).ready(function() {
   	$('.slaider__list').slick({
     	dots: false,
     	centerMode: "true",
-      variableWidth: true,
+      // variableWidth: true,
       adaptiveHeight: true,
     	infinite: true,
     	speed: 300,
