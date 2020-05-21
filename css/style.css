@@ -2413,8 +2413,8 @@ body {
 	position: relative;
 }
 .slaider__contact-wrapper {
-	width: 190px;
-  padding: 10px 0px;
+	width: 205px;
+  padding: 20px;
 	background-color: rgb(255, 255, 255);
 }
 .slaider__contact {
@@ -2426,14 +2426,29 @@ body {
 	position: relative;
 	padding: 0px;
 	margin: 0px;
+	margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 13px;
+	font-weight: 800;
+	color: #ff9000;
 	text-align: center;
 	text-transform: uppercase;
+}
+.slaider__contact-text {
+	display: block;
+  width: 140px;
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #1c1c1c;
 }
 .slaider__contact-title::before {
 	position: absolute;
 	content: "";
-	left: 10px;
-  top: 8px;
+	left: 0px;
+  top: 6px;
 	width: 26px;
 	height: 3px;
 	background-image: url(../img/icon-line.png);
@@ -2441,11 +2456,23 @@ body {
 .slaider__contact-title::after {
 	position: absolute;
 	content: "";
-	right: 10px;
-	top: 8px;
+	right: 0px;
+	top: 6px;
 	width: 26px;
 	height: 3px;
 	background-image: url(../img/icon-line.png);
+}
+.slaider__contact-inner {
+	display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+  width: 190px;
+  margin: auto;
 }
 @media (min-width: 1024px) {
 	.partners__wrapper {
@@ -2477,12 +2504,69 @@ body {
 	.partners__foto {
 		min-height: 400px;
 	}
+	.slaider__contact-title {
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 15px;
+	font-weight: 800;
+	color: #ff9000;
+	text-align: center;
+	text-transform: uppercase;
+}
+.slaider__contact-text {
+	display: block;
+  width: 140px;
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #1c1c1c;
+}
+.slaider__contact-title::before {
+	position: absolute;
+	content: "";
+	left: 0px;
+  top: 6px;
+	width: 26px;
+	height: 3px;
+	background-image: url(../img/icon-line.png);
+}
+.slaider__contact-title::after {
+	position: absolute;
+	content: "";
+	right: 0px;
+	top: 6px;
+	width: 26px;
+	height: 3px;
+	background-image: url(../img/icon-line.png);
+}
+.slaider__contact-inner {
+	display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+  width: 190px;
+  margin: auto;
+}
+.slaider__contact {
+		position: absolute;
+    left: 350px;
+    top: 165px;
+	}
 }
 @media (min-width: 1240px) {
 	.slaider__contact {
 		position: absolute;
 	  left: 530px;
-	  top: 320px;
+	  top: 270px;
 	}
 	.partners {
 		width: 100%;

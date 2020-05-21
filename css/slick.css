@@ -310,22 +310,22 @@
 .left-arrow {
   position: absolute;
   left: 16px;
-  top: 145px;
+  top: 125px;
   z-index: 1;
   cursor: pointer;
 }
 .left-arrow {
-  width: 6px;
-  height: 13px;
+  width: 32px;
+  height: 46px;
 }
 .right-arrow {
-  width: 6px;
-  height: 13px;
+  width: 32px;
+  height: 46px;
 }
 .right-arrow {
   position: absolute;
   right: 16px;
-  top: 145px;
+  top: 125px;
   z-index: 1;
   cursor: pointer;
 }
@@ -347,14 +347,14 @@
   .left-arrow {
     position: absolute;
     left: 355px;
-    top: 127px;
+    top: 107px;
     z-index: 1;;
     cursor: pointer;
   }
   .right-arrow {
     position: absolute;
     right: 355px;
-    top: 127px;
+    top: 107px;
     z-index: 1;
     cursor: pointer;
   }
@@ -381,14 +381,14 @@
   .left-arrow {
     position: absolute;
     left: 520px;
-    top: 185px;
+    top: 165px;
     z-index: 1;;
     cursor: pointer;
   }
   .right-arrow {
     position: absolute;
     right: 520px;
-    top: 185px;
+    top: 165px;
     z-index: 1;
     cursor: pointer;
   }

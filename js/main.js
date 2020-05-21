@@ -88,8 +88,8 @@ $(document).ready(function() {
       adaptiveHeight: true,
     	infinite: true,
     	speed: 300,
-    	prevArrow: '<img class="left-arrow" src="img/icon-left.png">',
-    	nextArrow: '<img class="right-arrow" src="img/icon-right.png">',
+    	prevArrow: '<img class="left-arrow" src="img/left-arrow.png">',
+    	nextArrow: '<img class="right-arrow" src="img/right-arrow.png">',
     	slidesToShow: 3,
     	slidesToScroll: 3,
     	responsive: [
