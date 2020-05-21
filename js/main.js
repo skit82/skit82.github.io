@@ -16,7 +16,7 @@ $(document).ready(function() {
         e.preventDefault();
         return false;
       }
-    })
+    }) 
 
     $(document).scroll(function() {
         if ($(this).scrollTop() > 100) {
@@ -91,17 +91,16 @@ $(document).ready(function() {
     	prevArrow: '<img class="left-arrow" src="img/icon-left.png">',
     	nextArrow: '<img class="right-arrow" src="img/icon-right.png">',
     	slidesToShow: 3,
-    	slidesToScroll: 1,
+    	slidesToScroll: 3,
     	responsive: [
     	{
         	breakpoint: 1440,
         	settings: {
           	infinite: true,
-          	slidesToShow: 1,
-          	slidesToScroll: 1,
+          	slidesToShow: 3,
+          	slidesToScroll: 3,
           	// centerMode: "-100px",
             adaptiveHeight: true,
-            variableWidth: true,
           	dots: false
         }
       	},
@@ -109,10 +108,10 @@ $(document).ready(function() {
 	        breakpoint: 767,
 	        settings: {
 	          infinite: true,
-	          slidesToShow: 1,
+	          slidesToShow: 3,
 	          adaptiveHeight: true,
 	          centerMode: true,
-	          slidesToScroll: 1
+	          slidesToScroll: 3
 	        }
 	      },
 	      {
