@@ -164,7 +164,7 @@ body {
     margin-top: 126px;
 	}
 	.page-header__top-logo {
-    width: 490px;
+    max-width: 490px;
     padding-top: 37px;
 	}
 	.page-header__footer h2 {
