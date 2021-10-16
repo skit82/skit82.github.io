@@ -96,7 +96,7 @@ body {
 	padding-top: 37px;
 }
 .page-header__top-contact {
-	width: 371px;
+	width: 390px;
 	margin-right: auto;
 	margin-left: 30px;
 }
@@ -264,7 +264,7 @@ body {
 		padding-top: 10px;
 	}
 	.page-header__top-contact {
-		width: 269px;
+		width: 285px;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -417,7 +417,7 @@ body {
 .partner__contact {
 	width: 570px;
 	min-height: 166px;
-	padding: 23px 76px;
+	padding: 23px 50px;
 	margin-bottom: 40px;
 	background: rgba(88, 106, 153, 1);
 }
@@ -559,7 +559,7 @@ body {
 		min-height: 128px;
 		margin: 0 auto;
 		margin-bottom: 30px;
-		padding: 25px 36px;
+		padding: 25px 20px;
 	}
 	.partner__contact a {
 		font-size: 24px;
@@ -1272,5 +1272,157 @@ body {
     margin-top: 30px;
     margin: 0 auto; 
     background: rgba(37, 57, 128, 1);
+	}
+}
+
+.callform {
+  z-index: 9;
+  display: none;
+  width: 610px;
+  height: 593px;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.mask {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0,0,0,.6);
+}
+
+.callform form {
+  width: 100%;
+  margin: 0;
+  padding: 70px 85px;
+  background: url("../img/form-desktop.jpg") no-repeat;
+}
+
+.callform h2 {
+	margin: 0;
+  margin-bottom: 30px;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 34px;
+	letter-spacing: 0em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+form label {
+  position: absolute;
+  top: -6000px;
+  left: -6000px;
+}
+
+.callform input {
+  font-family: inherit;
+  /*color: #fff;*/
+  height: 60px;
+  padding: 14px 16.4px;
+  padding-left: 50px;
+}
+
+.callform input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.callform input {
+    margin-bottom: 20px;
+    /*background: rgba(255,255,255,.1);*/
+    border: 0;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.callform button[type=submit] {
+  width: 100%;
+  height: 75px;
+  text-align: center;
+  padding: 14px 0;
+  background: rgba(217, 48, 58, 1);
+  border: 1px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 34px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  font-family: inherit;
+}
+
+.callform__active {
+  display: block;
+}
+
+.mask-active {
+  display: block;
+}
+
+.callform__close {
+	display: none;
+}
+.callform__login {
+	position: absolute;
+  top: 184px;
+  left: 97px;
+  z-index: 1;
+}
+.callform__call {
+	position: absolute;
+  top: 260px;
+  left: 97px;
+  z-index: 1;
+}
+.callform__email {
+	position: absolute;
+  top: 342px;
+  left: 97px;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+	.callform {
+    width: 375px;
+    height: 513px;
+  }
+  .callform form {
+  	padding: 60px 10px;
+  }
+  .callform h2 {
+		font-size: 24px;
+		line-height: 29px;
+	}
+	.callform input {
+		height: 54px;
+	}
+	.callform__login {
+    position: absolute;
+    top: 160px;
+    left: 17px;
+    z-index: 1;
+	}
+	.callform__call {
+    position: absolute;
+    top: 235px;
+    left: 17px;
+    z-index: 1;
+	}
+	.callform__email {
+    position: absolute;
+    top: 308px;
+    left: 17px;
+    z-index: 1;
 	}
 }

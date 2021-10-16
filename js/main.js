@@ -1,128 +1,78 @@
-$(document).ready(function() {
+'use strict'
 
-    $('.main-nav__mob-icon').on('click', function() {
-        $('.main-nav__list').slideToggle(400, function(){
-          if($(this).css('display') === 'none'){
-          $(this).removeAttr('style')
-          };
-      });
+var contactButton = document.querySelector('.contact__button');
+var popupForm = document.querySelector('.callform');
+var closePopup = document.querySelector('.callform__close');
+var popupLogin = popupForm.querySelector('[name=callform-login]');
+var popupPhone = popupForm.querySelector('[name=callform-tel]');
+var popupText = popupForm.querySelector('[name=callform-email]');
+var pageMask= document.querySelector('.mask');
+var isStorageSupport = true;
+var storage = "";
+var body = document.querySelector('body');
+
+try {
+  storage = localStorage.getItem('login');
+} catch (err) {
+  isStorageSupport = false;
+}
+
+var addClass = function (element, selector) {
+  element.classList.add(selector);
+};
+
+var removeClass = function (element, selector) {
+  element.classList.remove(selector);
+};
+
+var toggleClass = function (element, selector) {
+  element.classList.toggle(selector);
+};
+
+if (contactButton) {
+    contactButton.addEventListener('click', function () {
+      addClass(popupForm, 'callform__active');
+      if (storage) {
+        popupLogin.value = localStorage.getItem('login');
+        popupPhone.value = localStorage.getItem('phone');
+        popupText.value = localStorage.getItem('email');
+      }
+    popupLogin.focus();
+    addClass(body, 'body__overflow');
+    addClass(pageMask, 'mask-active');
+  })
+}
+
+if (closePopup) {
+    closePopup.addEventListener('click', function () {
+      removeClass(popupForm, 'callform__active');
+      removeClass(body, 'body__overflow');
+      removeClass(pageMask, 'mask-active');
     })
 
-    $('[data-toggle]').on('click', function(e){
-    var tgt = $(this).data('target');
-      if (tgt && $(tgt).length > 0) {
-        $(tgt).toggleClass('collapse');
+    if (pageMask) {
+      pageMask.addEventListener('click', function () {
+        removeClass(popupForm, 'callform__active');
+        removeClass(body, 'body__overflow');
+        removeClass(pageMask, 'mask-active');
+      })
+    }
 
-        e.preventDefault();
-        return false;
+    document.addEventListener('keydown', function (evt) {
+      if (evt.key === 'Escape') {
+        removeClass(popupForm, 'callform__active');
+        removeClass(body, 'body__overflow');
+        removeClass(pageMask, 'mask-active');
       }
-    }) 
-
-    $(document).scroll(function() {
-        if ($(this).scrollTop() > 100) {
-            if ($('.page-footer__icon-img').is(':hidden')) {
-                $('.page-footer__icon-img').css({opacity : 1}).fadeIn('slow');
-            }
-        } else { $('.page-footer__icon-img').stop(true, false).fadeOut('fast'); }
     });
-    $('.page-footer__icon-img').click(function() {
-        $('html, body').stop().animate({scrollTop : 0}, 900);
+  }
+
+  if (popupForm) {
+    popupForm.addEventListener('submit', function () {
+      if (isStorageSupport) {
+      localStorage.setItem('login', popupLogin.value)
+      localStorage.setItem('phone', popupPhone.value)
+      localStorage.setItem('email', popupText.value)
+    }
   });
-
-    $('.page-header__descr-link, .stock__caption-link, .food__caption-link, .manager__redact-link, .food__redact, .stock__redact-link ').click(function() {
-        $('.popup-fade').fadeIn();
-        return false;
-    });    
-    
-    $('.popup-close').click(function() {
-        $(this).parents('.popup-fade').fadeOut();
-        return false;
-    });        
-
-    $(document).keydown(function(e) {
-        if (e.keyCode === 27) {
-            e.stopPropagation();
-            $('.popup-fade').fadeOut();
-        }
-    });
-    
-    $('.popup-fade').click(function(e) {
-        if ($(e.target).closest('.popup, .popup-stock, .popup-dish').length == 0) {
-            $(this).fadeOut();                    
-        }
-    });
-
-    $("form-stock__remove").on("click", function(){
-        if( $("input").val() != "" ) {
-        alert("Вы уверены");
-        }
-    });
-
-    $('.dish__descr-link, .dish__caption-link').click(function() {
-        $('.rubric-fade').fadeIn();
-        return false;
-    });    
-    
-    $('.popup-close').click(function() {
-        $(this).parents('.rubric-fade').fadeOut();
-        return false;
-    });        
-
-    $(document).keydown(function(e) {
-        if (e.keyCode === 27) {
-            e.stopPropagation();
-            $('.rubric-fade').fadeOut();
-        }
-    });
-    
-    $('.rubric-fade').click(function(e) {
-        if ($(e.target).closest('.popup-rubric').length == 0) {
-            $(this).fadeOut();                    
-        }
-    });
-
-  	$('.slaider__list').slick({
-    	dots: false,
-    	centerMode: "true",
-      // variableWidth: true,
-      adaptiveHeight: true,
-    	infinite: true,
-    	speed: 300,
-    	prevArrow: '<img class="left-arrow" src="img/left-arrow.png">',
-    	nextArrow: '<img class="right-arrow" src="img/right-arrow.png">',
-    	slidesToShow: 3,
-    	slidesToScroll: 3,
-    	responsive: [
-    	{
-        	breakpoint: 1440,
-        	settings: {
-          	infinite: true,
-          	slidesToShow: 3,
-          	slidesToScroll: 3,
-          	// centerMode: "-100px",
-            adaptiveHeight: true,
-          	dots: false
-        }
-      	},
-	      {
-	        breakpoint: 767,
-	        settings: {
-	          infinite: true,
-	          slidesToShow: 3,
-	          adaptiveHeight: true,
-	          centerMode: true,
-	          slidesToScroll: 3
-	        }
-	      },
-	      {
-	        breakpoint: 520,
-	        settings: {
-	          infinite: true,
-	          slidesToShow: 1,
-	          adaptiveHeight: true,
-	          slidesToScroll: 1
-	        }
-      	}
-    	]
-  	});
-});
+}
